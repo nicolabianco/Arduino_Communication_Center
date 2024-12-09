@@ -3,7 +3,7 @@ Arduino Communication Center
 Il seguente progetto ha come obbiettivo raccogliere, elaborare e visualizzare dati da un dispositivo Arduino.
 
 
-Funzionalità
+Funzionalità:
 
 •	Acquisizione dati: ricezione, tramite Wi-Fi, di dati acquisiti da sensori collegati ad Arduino.
 
@@ -12,7 +12,7 @@ Funzionalità
 •	Visualizzazione: dashboard web per visualizzare i dati elaborati in tempo reale.
 
 
-Architettura
+Architettura:
 
 •	Client: Arduino
 
