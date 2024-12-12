@@ -29,7 +29,7 @@ public class ArduServiceImpl implements ArduService {
         data.setOraLettura(currentTime);
     }
 
-    public String viewData(Model model){
+    public String showData(Model model){
         String temperaturaDefault = "N/A";
         String dataLetturaDefault = "N/A";
         String oraLetturaDefault = "N/A";
