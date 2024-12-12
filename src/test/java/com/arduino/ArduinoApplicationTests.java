@@ -1,4 +1,4 @@
-package com.Arduino.demo;
+package com.arduino;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

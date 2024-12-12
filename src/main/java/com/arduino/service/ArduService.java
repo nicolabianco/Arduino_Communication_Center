@@ -1,6 +1,6 @@
-package com.Arduino.demo.service;
+package com.arduino.service;
 
-import com.Arduino.demo.dto.ArduinoDTO;
+import com.arduino.dto.ArduinoDTO;
 import org.springframework.ui.Model;
 
 

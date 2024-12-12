@@ -1,7 +1,7 @@
-package com.Arduino.demo.controller;
+package com.arduino.controller;
 
-import com.Arduino.demo.dto.ArduinoDTO;
-import com.Arduino.demo.service.ArduService;
+import com.arduino.dto.ArduinoDTO;
+import com.arduino.service.ArduService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

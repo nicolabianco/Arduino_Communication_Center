@@ -1,4 +1,4 @@
-package com.Arduino.demo.dto;
+package com.arduino.dto;
 
 import lombok.Data;
 

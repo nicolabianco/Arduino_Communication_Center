@@ -1,4 +1,4 @@
-package com.Arduino.demo;
+package com.arduino;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

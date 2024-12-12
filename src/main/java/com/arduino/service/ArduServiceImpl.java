@@ -1,7 +1,7 @@
-package com.Arduino.demo.service;
+package com.arduino.service;
 
-import com.Arduino.demo.dto.ArduinoDTO;
-import com.Arduino.demo.dto.DataDTO;
+import com.arduino.dto.ArduinoDTO;
+import com.arduino.dto.DataDTO;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
