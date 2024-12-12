@@ -37,7 +37,7 @@ public class ArduServiceImpl implements ArduService {
         arduinoRepository.save(ArduinoMapper.toEntity(data));
     }
 
-    public String viewData(Model model){
+    public String showData(Model model){
         String temperaturaDefault = "N/A";
         String dataLetturaDefault = "N/A";
         String oraLetturaDefault = "N/A";

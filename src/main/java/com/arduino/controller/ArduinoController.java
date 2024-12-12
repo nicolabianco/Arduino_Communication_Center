@@ -26,9 +26,9 @@ public class ArduinoController {
     }
 
 
-    @GetMapping("/viewData")
-    public String viewData(Model model) {
-        arduService.viewData(model);
+    @GetMapping("/showData")
+    public String showData(Model model) {
+        arduService.showData(model);
         return "pagina";
     }
 }
