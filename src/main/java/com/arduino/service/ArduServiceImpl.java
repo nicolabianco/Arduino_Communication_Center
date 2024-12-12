@@ -2,12 +2,16 @@ package com.arduino.service;
 
 import com.arduino.dto.ArduinoDTO;
 import com.arduino.dto.DataDTO;
+import com.arduino.mapper.ArduinoMapper;
+import com.arduino.repository.ArduinoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
+
 
 @Service
 public class ArduServiceImpl implements ArduService {
@@ -18,6 +22,9 @@ public class ArduServiceImpl implements ArduService {
         this.data = new DataDTO();
     }
 
+    @Autowired
+    private ArduinoRepository arduinoRepository;
+
     public void manageData(ArduinoDTO dto){
         data.setTemperatura(dto.getTemperatura());
         LocalDateTime now = LocalDateTime.now();
@@ -27,6 +34,7 @@ public class ArduServiceImpl implements ArduService {
         String currentTime = now.format(timeFormatter);
         data.setDataLettura(currentDate);
         data.setOraLettura(currentTime);
+        arduinoRepository.save(ArduinoMapper.toEntity(data));
     }
 
     public String viewData(Model model){
