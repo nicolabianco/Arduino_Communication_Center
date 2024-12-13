@@ -11,6 +11,9 @@ Funzionalità:
 
 •	Visualizzazione: dashboard web per visualizzare i dati elaborati in tempo reale.
 
+• Archiviazione: database relazionale per la persistenza dei dati
+
+
 
 Architettura:
 
@@ -18,3 +21,4 @@ Architettura:
 
 •	Server: Java Spring Boot & Thymeleaf. 
 
+• Database: MySQL
