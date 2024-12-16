@@ -1,9 +1,11 @@
-package com.arduino.service;
+package com.arduino.service.impl;
 
 import com.arduino.dto.ArduinoDTO;
 import com.arduino.dto.DataDTO;
 import com.arduino.mapper.ArduinoMapper;
 import com.arduino.repository.ArduinoRepository;
+import com.arduino.service.ArduService;
+import com.arduino.service.TelegramService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -25,6 +27,9 @@ public class ArduServiceImpl implements ArduService {
     @Autowired
     private ArduinoRepository arduinoRepository;
 
+    @Autowired
+    private TelegramService telegramService;
+
     public void manageData(ArduinoDTO dto){
         data.setTemperatura(dto.getTemperatura());
         LocalDateTime now = LocalDateTime.now();
@@ -35,6 +40,7 @@ public class ArduServiceImpl implements ArduService {
         data.setDataLettura(currentDate);
         data.setOraLettura(currentTime);
         arduinoRepository.save(ArduinoMapper.toEntity(data));
+        telegramService.sendMessage(dto.getTemperatura());
     }
 
     public String showData(Model model){
