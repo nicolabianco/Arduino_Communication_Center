@@ -49,6 +49,8 @@ public class ArduServiceImpl implements ArduService {
         model.addAttribute("temperatura", temperatura);
         model.addAttribute("data_lettura", dataLettura);
         model.addAttribute("ora_lettura", oraLettura);
+        model.addAttribute("temperatura_minima", arduinoRepository.findTemperaturaMinima());
+        model.addAttribute("temperatura_massima", arduinoRepository.findTemperaturaMassima());
         return "pagina";
     }
 }
