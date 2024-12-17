@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riepilogo settimanale delle temperature rilevate</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+            width: 50%;
+        }
+        table th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        table td {
+            background-color: #f9f9f9;
+        }
+        table tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+        table tr:hover td {
+            background-color: #e1f7e1;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Riepilogo Settimanale delle Temperature Rilevate</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Giorno</th>
+            <th>Dati</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="giorno : ${giorniETemperature}">
+            <td th:text="${giorno.key}"></td>
+            <td th:text="${giorno.value}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
