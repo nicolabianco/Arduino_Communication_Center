@@ -18,13 +18,17 @@ Il seguente progetto ha come obbiettivo raccogliere, elaborare e visualizzare da
 
 
 
-## Architettura:
+## Architettura e tecnologie:
 
 •	Client: Arduino
 
 •	Server: Java Spring Boot & Thymeleaf. 
 
 • Database: MySQL
+
+• OpenAPI
+
+• Docker
 
 ## Arduino dashboard
 
