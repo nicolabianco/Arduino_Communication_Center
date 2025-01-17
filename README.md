@@ -36,6 +36,7 @@ Il seguente progetto ha come obbiettivo raccogliere, elaborare e visualizzare da
 
 ## Mail riepilogativa
 
-![image](https://github.com/user-attachments/assets/743205ca-af7c-405b-8c91-1f2103b737de)
+![image](https://github.com/user-attachments/assets/4799f4ca-4c32-4773-84c8-610ab5000285)
+
 
 
