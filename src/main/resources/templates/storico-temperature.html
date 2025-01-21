@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Semplice</title>
+    <title>Storico temperature</title>
     <style>
     body {
       margin: 0;
@@ -44,12 +44,14 @@
       padding: 20px;
       text-align: center;
       border-bottom: 1px solid #bdc3c7;
+      margin: 0;
     }
 
     .content {
       flex: 1;
       display: flex;
       flex-direction: column;
+      padding: 0;
     }
 
     .main-content {
@@ -65,19 +67,60 @@
     .main-content p {
       line-height: 1.6;
     }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #bdc3c7;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #ecf0f1;
+    }
+
+    .table-container {
+      margin-top: 0;
+    }
   </style>
 </head>
 <body>
 <div class="sidebar">
+    <div>
+        <a th:href="@{/data/homepage}">Homepage</a>
+        <a th:href="@{/data/storico-temperature}">Storico Temperature</a>
+    </div>
 </div>
 <div class="content">
     <div class="header">
         <h1>Benvenuto nella Dashboard di Arduino</h1>
     </div>
     <div class="main-content">
-        <h1 th:text ="'Ultima temperatura rilevata di ' + ${temperatura} + ' gradi il ' + ${data_lettura} + ' alle ore ' + ${ora_lettura}"></h1>
-        <h1 th:text ="'Temperatura minima rilevata di ' + ${temperatura_minima} + ' gradi '"></h1>
-        <h1 th:text ="'Temperatura massima rilevata di ' + ${temperatura_massima} + ' gradi '"></h1>
+        <h1 th:text="'Tabella riepilogativa delle ultime temperature rilevate'"></h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>Giorno</th>
+                    <th>Temperatura (°C)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="record : ${storico}">
+                    <td th:text="${record.key}"></td>
+                    <td th:text="${record.value}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 </body>

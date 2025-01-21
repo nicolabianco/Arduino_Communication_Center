@@ -2,6 +2,7 @@ package com.arduino.controller;
 
 import com.arduino.dto.ArduinoDTO;
 import com.arduino.service.ArduService;
+import com.arduino.util.ArduUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,9 @@ public class ArduinoController {
     @Autowired
     private ArduService arduService;
 
+    @Autowired
+    private ArduUtil arduUtil;
+
 
     @PostMapping("/receiveData")
     @ResponseBody
@@ -24,9 +28,15 @@ public class ArduinoController {
     }
 
 
-    @GetMapping("/showData")
-    public String showData(Model model) {
+    @GetMapping("/homepage")
+    public String showHomePage(Model model) {
         arduService.showData(model);
-        return "pagina";
+        return "homepage";
+    }
+
+    @GetMapping("/storico-temperature")
+    public String showStoricoTemperature(Model model) {
+        model.addAttribute("storico", arduUtil.mappingMediaTemperatura(7l));
+        return "storico-temperature";
     }
 }
