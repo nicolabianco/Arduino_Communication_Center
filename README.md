@@ -6,9 +6,9 @@ Il seguente progetto ha come obbiettivo raccogliere, elaborare e visualizzare da
 
 •	Acquisizione: ricezione, tramite Wi-Fi, di dati acquisiti da sensori collegati ad Arduino.
 
-•	Elaborazione: gestione e elaborazione dei dati ricevuti, incluso il caso di valori mancanti.
+•	Elaborazione: gestione e elaborazione dei dati ricevuti.
 
-•	Visualizzazione: dashboard web per visualizzare i dati elaborati in tempo reale.
+•	Visualizzazione: dashboard web per visualizzare i dati elaborati in tempo reale così come i dati registrati negli ultimi sette giorni.
 
 • Archiviazione: database relazionale per la persistenza dei dati
 
@@ -16,7 +16,7 @@ Il seguente progetto ha come obbiettivo raccogliere, elaborare e visualizzare da
 
 • Riepilogo: generazione e invio di una mail ogni lunedì mattina alle ore 9 con i dati raccolti negli ultimi sette giorni. 
 
-
+• Reportistica: generazione e download di un file pdf contenente un report delle temperature rilevate negli ultimi sette giorni.
 
 ## Architettura e tecnologie:
 
