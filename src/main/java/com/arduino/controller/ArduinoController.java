@@ -39,4 +39,9 @@ public class ArduinoController {
         model.addAttribute("storico", arduUtil.mappingMediaTemperatura(7l));
         return "storico-temperature";
     }
+
+    @GetMapping("/download-report")
+    public  ResponseEntity<byte[]>  downloadReport(){
+        return arduService.downloadReport();
+    }
 }
