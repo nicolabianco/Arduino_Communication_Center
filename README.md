@@ -32,7 +32,8 @@ Il seguente progetto ha come obbiettivo raccogliere, elaborare e visualizzare da
 
 ## Arduino dashboard
 
-<img src="C:\Users\Nicola\Desktop\test progetto\homepage.JPG"/>
+![image](https://github.com/user-attachments/assets/f54bebf3-a720-4b87-b9ec-60f6c41636ab)
+
 
 ## Mail riepilogativa
 
