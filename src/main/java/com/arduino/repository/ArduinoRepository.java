@@ -18,10 +18,10 @@ public interface ArduinoRepository extends JpaRepository<ArduinoData, Long> {
     @Query("SELECT MAX(t.temperature) FROM ArduinoData t")
     String findTemperaturaMassima();
 
-    @Query("SELECT FUNCTION('DATE', o.dataOra) AS giorno, ROUND(AVG(o.temperature), 1) AS media " +
+    @Query("SELECT DATE(o.dataOra) AS giorno, ROUND(AVG(o.temperature), 1) AS media " +
             "FROM ArduinoData o " +
             "WHERE o.dataOra >= :dataInizio " +
-            "GROUP BY FUNCTION('DATE', o.dataOra) " +
-            "ORDER BY giorno")
+            "GROUP BY DATE(o.dataOra) " +
+            "ORDER BY DATE(o.dataOra) ASC")
     List<Object[]> findMediaPerGiorno(@Param("dataInizio") Instant dataInizio);
 }
